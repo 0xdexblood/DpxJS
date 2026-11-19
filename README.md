@@ -186,11 +186,7 @@ dpxjs/
 
 ---
 
-## ⚠️ Disclaimer
 
-DPXJS is intended for **authorized security testing and education only**. Only analyze applications you own or have explicit permission to test. The author is not responsible for misuse. Static analysis can produce false positives and negatives, so always verify findings manually.
-
----
 
 ## 🤝 Contributing
 
