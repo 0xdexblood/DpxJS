@@ -165,17 +165,7 @@ DpxJS/
 
 ---
 
-## 🤝 Contributing
 
-1. Fork the repository
-2. Create a branch: `git checkout -b feature/my-feature`
-3. Commit: `git commit -m "Add my feature"`
-4. Push: `git push origin feature/my-feature`
-5. Open a Pull Request
-
-Ideas: Chromium port, more secret signatures, new sink/source rules, Markdown/SARIF export.
-
----
 
 ## 📜 License
 
