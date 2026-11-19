@@ -21,7 +21,6 @@ Proven XSS flows, leaked secrets and hidden endpoints, with one-click AI triage.
   <a href="#-usage">Usage</a> •
   <a href="#-ai-triage-numes">AI Triage</a> •
   <a href="#-how-it-works">How it works</a> •
-  <a href="#-contributing">Contributing</a>
 </p>
 
 </div>
