@@ -1,0 +1,53 @@
+{
+  "manifest_version": 3,
+  "name": "DPXJS",
+  "version": "1.0.3",
+  "description": "Client-side JavaScript security analyzer: proven DOM XSS flows, secrets and endpoints, with one-click AI triage via Numes.",
+  "author": "0xdexblood",
+  "homepage_url": "https://github.com/0xdexblood",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "dpxjs@local",
+      "strict_min_version": "115.0"
+    }
+  },
+  "icons": {
+    "16": "icons/logo.png",
+    "32": "icons/logo.png",
+    "48": "icons/logo.png",
+    "96": "icons/logo.png",
+    "128": "icons/logo.png"
+  },
+  "background": {
+    "scripts": [
+      "vendor/acorn.js",
+      "analyzer.js",
+      "background.js"
+    ]
+  },
+  "devtools_page": "devtools.html",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "webRequest",
+    "webNavigation",
+    "tabs",
+    "webRequestBlocking",
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "DPXJS - scan this page",
+    "default_icon": {
+      "16": "icons/logo.png",
+      "32": "icons/logo.png",
+      "48": "icons/logo.png",
+      "96": "icons/logo.png",
+      "128": "icons/logo.png"
+    }
+  }
+}
