@@ -67,17 +67,17 @@ DPXJS is a **Firefox (Manifest V3)** extension, minimum Firefox **115**.
 
 ### Option 1: Temporary install (quickest, for testing)
 
-1. Download the latest release ZIP from the [Releases](../../releases) page, or clone the repo:
+1. Clone the repository:
    ```bash
-   git clone https://github.com/0xdexblood/dpxjs.git
-   cd dpxjs
+   git clone https://github.com/0xdexblood/DpxJS.git
+   cd DpxJS/dpxjs
    ```
 2. Open Firefox and go to:
    ```
    about:debugging#/runtime/this-firefox
    ```
 3. Click **Load Temporary Add-on...**
-4. Select the `manifest.json` file inside the `dpxjs` folder.
+4. Select the `manifest.json` file inside the `DpxJS/dpxjs` folder.
 5. The DPXJS icon appears in the toolbar. Pin it for quick access.
 
 > ⚠️ Temporary add-ons are removed when Firefox restarts. Repeat the steps after a restart, or use Option 2.
@@ -89,8 +89,8 @@ Release builds of Firefox only accept signed add-ons. Use **Developer Edition**,
 1. Open `about:config` and set `xpinstall.signatures.required` to `false`.
 2. Zip the **contents** of the extension folder (`manifest.json` must be at the root of the ZIP):
    ```bash
-   cd dpxjs
-   zip -r ../dpxjs.xpi . -x "*.git*"
+   cd DpxJS/dpxjs
+   zip -r ../../dpxjs.xpi . -x "*.git*"
    ```
 3. Open `about:addons` → ⚙️ → **Install Add-on From File...** → choose `dpxjs.xpi`.
 
@@ -146,7 +146,7 @@ DPXJS can send findings to an LLM through the [Numes](https://numes.ai) API (Ope
 
 **Privacy notes**
 
-- Only the code snippet and metadata of the item you triage are sent, never your whole browsing session.
+- Only the findings and code snippets you choose to analyze are sent, never your browsing history.
 - Your API key is only used in the `Authorization` header.
 - AI is **opt-in**. Without a key, the extension works fully offline.
 
@@ -173,19 +173,22 @@ DPXJS can send findings to an LLM through the [Numes](https://numes.ai) API (Ope
 ## 🗂️ Project structure
 
 ```
-dpxjs/
-├── manifest.json      # Extension manifest (MV3, Firefox)
-├── background.js      # Script tracking, scanning, AI jobs, Numes API
-├── analyzer.js        # AST + taint engine, secret/endpoint/library rules
-├── popup.html / .js   # Main UI
-├── viewer.html / .js  # Source code viewer with line highlighting
-├── devtools.html / .js# Optional DevTools script discovery
-├── vendor/acorn.js    # JavaScript parser
-└── icons/logo.png
+DpxJS/
+├── Logo.png
+├── README.md
+├── LICENSE
+└── dpxjs/             # the extension
+    ├── manifest.json      # Extension manifest (MV3, Firefox)
+    ├── background.js      # Script tracking, scanning, AI jobs, Numes API
+    ├── analyzer.js        # AST + taint engine, secret/endpoint/library rules
+    ├── popup.html / .js   # Main UI
+    ├── viewer.html / .js  # Source code viewer with line highlighting
+    ├── devtools.html / .js# Optional DevTools script discovery
+    ├── vendor/acorn.js    # JavaScript parser
+    └── icons/logo.png
 ```
 
 ---
-
 
 
 ## 🤝 Contributing
