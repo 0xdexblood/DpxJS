@@ -23,6 +23,10 @@ Proven DOM XSS flows, leaked secrets and hidden endpoints.
 
 </div>
 
+<p align="center">
+  <img src="screen.png" alt="DPXJS screenshot" width="900" />
+</p>
+
 ---
 
 ## 📖 About
